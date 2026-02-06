@@ -39,6 +39,32 @@
             object-fit: cover;
             display: block;
         }
+
+        /* Custom Scrollbar Styling */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #FEF1D1;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #d4a574;
+            border-radius: 10px;
+            transition: background 0.3s ease;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #c19660;
+        }
+
+        /* Firefox scrollbar styling */
+        html {
+            scrollbar-width: thin;
+            scrollbar-color: #d4a574 #FEF1D1;
+        }
     </style>
 </head>
 <body>
@@ -60,7 +86,7 @@
             menuItem.className = 'col-6'; // Bootstrap class for 2 items per row (6 columns each)
             menuItem.innerHTML = `
                 <div class="menu-item">
-                    <img src="img/HartakaMenu${i}.png" alt="Menu ${i}">
+                    <img src="img/HartakaMenu${i}.webp" alt="Menu ${i}">
                 </div>
             `;
             menuGrid.appendChild(menuItem);
